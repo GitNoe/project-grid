@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=IM+Fell+Double+Pica+SC&family=Zhi+Mang+Xing&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*cabecera*/
+.header{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+}
+.mummy img{
+    flex: 1;
+    width: 170px;
+    height: 200px; 
+}
+.title{
+    flex:1;
+    text-align: center;
+}
+.title h4{
+    font-family: 'IM Fell Double Pica SC', serif;
+    font-size: 2em;
+    color:sienna;
+    margin-bottom: 30px;
+}
+.title h1{
+    font-family: 'Amarante', cursive;
+    font-size: 4em;
+    color:silver;
+    text-shadow: 2px 2px 2px black;
+}
+
+/*cuerpo*/
+.grid-container{
+    display: grid; /*como se muestra*/
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /*responsive*/
+    grid-gap: 1em; /*distancia entre elemento del grid*/
+    margin: 30px; /*respecto al body*/
+}
+
+.articulo{ /*cada elemento*/
+    border: 1px solid black;
+    padding: 10px;
+}
+.articulo h3{
+    font-family: 'IM Fell Double Pica SC', serif;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.articulo h3:hover{
+    color:maroon;
+    cursor: pointer;
+}
+.articulo p{
+    font-family: 'Zhi Mang Xing', cursive;
+    font-size: 1.2em;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+.articulo img{
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+.articulo:nth-child(1){
+    grid-row: span 3;
+}
+.articulo:nth-child(1), .articulo:nth-child(4), .articulo:nth-child(7), .articulo:nth-child(10){ /*estos elementos ocupan dos espacios del grid*/
+    grid-column: span 2;
+    background: url(../img/fondo-grids.jpg) center no-repeat;
+    background-size: cover;
+}
+.articulo:nth-child(3), .articulo:nth-child(6), .articulo:nth-child(9){
+    background-color: rgba(121, 94, 8, 0.5);
+}
+.articulo:nth-child(2), .articulo:nth-child(5), .articulo:nth-child(8){
+    background-color: rgba(179, 163, 28, 0.5);
+}
